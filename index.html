@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Sales Dashboard - Business Intelligence</title>
+    <meta name="description" content="Interactive e-commerce sales dashboard for analyzing best-selling products, trends, and revenue insights">
+    <meta name="keywords" content="e-commerce, sales dashboard, business intelligence, data analytics, power bi alternative">
+    <meta property="og:title" content="E-Commerce Sales Dashboard">
+    <meta property="og:description" content="Interactive dashboard with sales trends and product analytics">
+    <meta name="twitter:title" content="E-Commerce Sales Dashboard">
+    <meta name="twitter:description" content="Interactive dashboard with sales trends and product analytics">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #dbeafe;
+            --accent-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-[var(--bg-primary)] rounded-xl shadow-sm border border-[var(--border-color)] p-6;
+        }
+        
+        .metric-card {
+            @apply card hover:shadow-md transition-shadow;
+        }
+        
+        .btn-primary {
+            @apply px-4 py-2 bg-[var(--primary-color)] text-white rounded-lg hover:opacity-90 transition-opacity;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/MetricCard.js"></script>
+    <script type="text/babel" src="components/SalesChart.js"></script>
+    <script type="text/babel" src="components/ProductTable.js"></script>
+    <script type="text/babel" src="components/CategoryChart.js"></script>
+    <script type="text/babel" src="utils/mockData.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
